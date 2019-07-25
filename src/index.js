@@ -90,7 +90,6 @@ class App {
     } catch (err) {
       this.getReturn.innerHTML = "This user doesn't exist";
     }
-
   }
   render() {
     this.resDiv.innerHTML = '';
