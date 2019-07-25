@@ -4,7 +4,7 @@ import api from './api.js';
 const app = document.querySelector('#app');
 
 // Create main div
-const mainDiv = document.createElement('div');
+const mainDiv = document.createElement('form');
 mainDiv.setAttribute('id', 'miolo');
 app.appendChild(mainDiv);
 
@@ -83,14 +83,10 @@ class App {
       // Object destructuring
       const { name, bio, html_url, avatar_url } = response.data;
 
-      // Truncate bio to don't show more than 90 letters
-      const truncated = bio.length > 90
-      ? bio.substr(-10000, 90) + '...' : bio;
-
       // Create object with requested data
       this.users.push({
         name,
-        bio: truncated,
+        bio,
         avatar_url,
         html_url,
       });
