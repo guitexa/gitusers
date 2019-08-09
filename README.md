@@ -2,7 +2,7 @@
 
 ## Requirements
 
-Install dependencies listed on package.json
+Installing all the dependencies of project
 
 ```shell
 yarn
